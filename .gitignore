@@ -1,4 +1,6 @@
 .vscode
 dist
+build
 __pycache__
 *.pyc
+*.spec
