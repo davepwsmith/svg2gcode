@@ -56,7 +56,7 @@ bed_max_y = 200
 feed_rate = 7200.00
 
 # Extrusion Rate Multiplier
-# Set the extrusion multiplier below where 
+# Set the extrusion multiplier below where:
 # [multiplier] = [G-Code E Value] / [Distance Traveled in Millimeters]
 extrusion_multi = 12/10
 
