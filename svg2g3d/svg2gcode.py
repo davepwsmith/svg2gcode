@@ -144,7 +144,7 @@ def generate_gcode(filename):
                     x = scale*x
                     y = bed_max_y - scale*y
 
-                    # Set the amount of material extruded
+                    # Set the extrusion value (Ennn) per 10mm/1cm of lateral travel
                     b = abs((x - y)) * extrusion_multi
 
                     # Increase material extruded cumulatively

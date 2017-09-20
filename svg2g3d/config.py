@@ -56,7 +56,8 @@ bed_max_y = 200
 feed_rate = 7200.00
 
 # Extrusion Rate Multiplier
-# Default below is for Ultimaker Original
+# Set the extrusion value (Ennn) per 10mm/1cm of lateral travel
+# Default below is for Ultimaker Original paste extrusion (custom build)
 extrusion_multi = 0.0044
 
 #  Used to control the smoothness/sharpness of the curves.
