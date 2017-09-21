@@ -148,13 +148,15 @@ def generate_gcode(filename):
 
                     if x_curr is None:
                         x_curr = scale*x
-                        y_curr = bed_max_y - scale*y
+                        #y_curr = bed_max_y - scale*y
+                        y_curr = scale*y
 
                     x_prev = x_curr
                     y_prev = y_curr
 
                     x_curr = scale*x
-                    y_curr = bed_max_y - scale*y
+                    #y_curr = bed_max_y - scale*y
+                    y_curr = scale*y
                     z = math.sqrt((math.pow(x_prev-x_curr, 2) + math.pow(y_prev-y_curr, 2)))
                     #print()
                     #print("E-NUMBER BABY!:", z)
@@ -171,13 +173,13 @@ def generate_gcode(filename):
                     print("X:", x_curr, "Y:", y_curr, "New_Extr:", e)
                     log += debug_log("\t  pt: "+str((x,y)))
 
-                    if x >= 0 and x <= bed_max_x and y >= 0 and y <= bed_max_y:
+                    if x_curr >= 0 and x_curr <= bed_max_x and y_curr >= 0 and y_curr <= bed_max_y:
                         if new_shape:
-                            gcode += ("G0 X%0.3f Y%0.3f\n" % (x, y))
+                            gcode += ("G0 X%0.3f Y%0.3f\n" % (x_curr, y_curr))
                             new_shape = False
                         else:
 
-                            gcode += ("G1 X%0.3f Y%0.3f E%0.3f\n" % (x, y, e))
+                            gcode += ("G1 X%0.3f Y%0.3f E%0.3f\n" % (x_curr, y_curr, e))
                         log += debug_log("\t    --Point printed")
                     else:
                         log += debug_log("\t    --POINT NOT PRINTED ("+str(bed_max_x)+","+str(bed_max_y)+")")
