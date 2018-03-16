@@ -8,7 +8,7 @@ Takes a folder of SVGs (selected with a file picker) and creates gcode for a sin
 ## Installation
 Simply clone this repo.
 ```
-git clone https://github.com/JustaBitDope/py-svg2gcode.git
+git clone https://github.com/davepwsmith/svg2gcode.git
 ```
 
 ## Usage
